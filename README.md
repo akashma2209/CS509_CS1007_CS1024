@@ -317,33 +317,17 @@ other vertices = infinity
 
 # Test Cases and Result Tables
 
-## CSR Result Table
 
-| Test File | Input Type | Input Size (V,E) | Expected Output | Actual Output | Algorithm Time | Status |
-|-----------|------------|------------------|-----------------|---------------|----------------|--------|
-| csr_test_01.txt | Adjacency List converted to CSR | V = ___ , E = ___ | CSR arrays | CSR arrays | ___ ms | Pass |
-| csr_test_02.txt | Adjacency List converted to CSR | V = ___ , E = ___ | CSR arrays | CSR arrays | ___ ms | Pass |
-
----
-
-# BFS and DFS Result Table
-
-| Test File | Input Type | Input Size (V,E) | Expected Output | Actual Output | BFS Time | DFS Time | Status |
-|-----------|------------|------------------|-----------------|---------------|----------|----------|--------|
-| graph_01.txt | CSR Graph | V = 5 , E = 6 | Traversal sequence | Traversal sequence | 0.62 ms | 0.21 ms | Pass |
-
-
----
 
 # SSSP Result Table
 
 | Test File | Input Type | Input Size (V,E) | Source Vertex | Expected Output | Actual Output | Algorithm Time | Status |
 |-----------|------------|------------------|---------------|-----------------|---------------|----------------|--------|
-| sssp_test_01.txt | Weighted CSR Graph | V = 5 , E = 6 | ___ | Shortest distances | Shortest distances | 0.0014 ms | Pass |
-| sssp_test_02.txt | Weighted CSR Graph | V = 6 , E = 8 | ___ | Shortest distances | Shortest distances | 0.0018 ms | Pass |
-| sssp_test_03.txt | Weighted CSR Graph | V = 5 , E = 100 | ___ | Shortest distances | Shortest distances | 0.002 ms | Pass |
-| sssp_test_03.txt | Weighted CSR Graph | V 100 , E = 500 | ___ | Shortest distances | Shortest distances | 0.056 ms | Pass |
-| sssp_test_05.txt | Weighted CSR Graph | V = 1000 , E = 3000 | ___ | Shortest distances | Shortest distances | 2.909 ms | Pass |
+| sssp_test_01.txt | Weighted CSR Graph | V = 5 , E = 6 | 0 | Shortest distances | Shortest distances | 0.0014 ms | Pass |
+| sssp_test_02.txt | Weighted CSR Graph | V = 6 , E = 8 | 0 | Shortest distances | Shortest distances | 0.0018 ms | Pass |
+| sssp_test_03.txt | Weighted CSR Graph | V = 5 , E = 100 | 0 | Shortest distances | Shortest distances | 0.002 ms | Pass |
+| sssp_test_03.txt | Weighted CSR Graph | V 100 , E = 500 | 0 | Shortest distances | Shortest distances | 0.056 ms | Pass |
+| sssp_test_05.txt | Weighted CSR Graph | V = 1000 , E = 3000 | 0 | Shortest distances | Shortest distances | 2.909 ms | Pass |
 
 ---
 
