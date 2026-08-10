@@ -367,11 +367,11 @@ The following table summarizes the measured Betweenness Centrality results.
 
 | Test File | Vertices (V) | Edges (E) | Algorithm Time | Status |
 | --------- | ------------: | --------: | -------------- | ------ |
-| `bc_5.txt` | [5] | [E] | [Time] ms | Pass |
-| `bc_10.txt` | [10] | [E] | [Time] ms | Pass |
-| `bc_100.txt` | [100] | [E] | [Time] ms | Pass |
-| `bc_10000.txt` | [1000] | [E] | [Time] ms | Pass |
-| `bc_50000.txt` | [1000] | [E] | [Time] ms | Pass |
+| `bc_5.txt` | [5] | 4 | 0.01 ms | Pass |
+| `bc_10.txt` | [10] | 12 | 0.06 ms | Pass |
+| `bc_100.txt` | [100] | 120 | 3.14 ms | Pass |
+| `bc_10000.txt` | [1000] | 10050 | 25667.31 ms | Pass |
+| `bc_50000.txt` | [1000] | 50500 | 722841.31 ms | Pass |
 
 ---
 
@@ -381,14 +381,32 @@ The following table summarizes the measured Connected Components results.
 
 | Test File | Vertices (V) | Edges (E) | Number of Components | Algorithm Time | Status |
 | --------- | ------------: | --------: | -------------------: | -------------- | ------ |
-| `cc_8.txt` | [5] | [E] | [Output] | [Time] ms | Pass |
-| `cc_10.txt` | [8] | [E] | [Output] | [Time] ms | Pass |
-| `cc_100.txt` | [100] | [E] | [Output] | [Time] ms | Pass |
-| `cc_10000.txt` | [1000] | [E] | [Output] | [Time] ms | Pass |
-| `cc_50000.txt` | [1000] | [E] | [Output] | [Time] ms | Pass |
+| `cc_8.txt` | [5] | 4 | 4 | 0.004 ms | Pass |
+| `cc_10.txt` | [8] | 15 | 1 | 0.004 ms | Pass |
+| `cc_100.txt` | [100] | 130 | 22 | 0.017 ms | Pass |
+| `cc_10000.txt` | [1000] | 10500 | 1 | 0.754 ms | Pass |
+| `cc_50000.txt` | [1000] | 50500 | 1500 | 3.636 ms | Pass |
 
 ---
 
+# 14. Observations
 
+### 14.1 Triangle Counting
+
+
+
+### 14.2 Betweenness Centrality
+
+- The execution time increased significantly as the graph size increased.
+- The increase is much more noticeable for the larger test cases, which is consistent with the higher computational cost of running shortest-path traversal from every vertex.
+- The `bc_10000.txt` and `bc_50000.txt` tests show a very large increase in execution time compared with the smaller graphs.
+- Overall, the results show that Betweenness Centrality becomes computationally expensive for larger graphs.
+
+### 14.3 Connected Components
+
+- The execution time generally increased with the number of vertices and edges in the graph.
+- Smaller graphs completed in a very short amount of time, while the larger graphs required more computation.
+- The number of connected components depends on the structure of the graph and therefore does not necessarily increase with graph size.
+- Overall, the Connected Components implementation performs efficiently for the tested graph sizes, with execution time remaining relatively small even for the larger test cases.
 
 
