@@ -393,7 +393,11 @@ The following table summarizes the measured Connected Components results.
 
 ### 14.1 Triangle Counting
 
-
+- All Triangle Counting test cases passed successfully, and the expected triangle counts were produced.
+- The execution time generally increased as the number of vertices and edges increased.
+- For smaller graphs, the execution time was very low and increased gradually with graph size.
+- The larger test cases also show that increasing the number of edges increases the execution time, even when the number of vertices remains the same.
+- Overall, the results show that the implementation performs efficiently for the tested graph sizes, with execution time increasing as the graph becomes larger or denser.
 
 ### 14.2 Betweenness Centrality
 
