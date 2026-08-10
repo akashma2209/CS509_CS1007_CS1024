@@ -15,7 +15,7 @@ Each assignment lives in its own folder with a dedicated README covering full al
 | Entry Number | 2026CSM1024 |
 | Student 2 Name | Aryan Shrivastva |
 | Entry Number | 2026CSM1007 |
-| Programming Language | C++ |
+
 
 ---
 
@@ -36,17 +36,17 @@ Each assignment lives in its own folder with a dedicated README covering full al
 ```
 CS509_CS1007_CS1024
 │
-├── README.md                  <- you are here
+├── README.md                  
 ├── Makefile
 │
-├── wrapper/                   <- single entry point to run any assignment
+├── wrapper/                   
 │   ├── wrapper.cpp
 │   └── wrapper.exe
 │
-├── common/                    <- reusable code shared across assignments
-│   └── csr/                   <- standalone CSR (Compressed Sparse Row) implementation
+├── common/                    
+│   └── csr/                   
 │
-├── assignment_01/              <- Graph traversal & shortest path using CSR
+├── assignment_01/              
 │   ├── README.md
 │   ├── driver/
 │   ├── src/
@@ -54,7 +54,7 @@ CS509_CS1007_CS1024
 │   ├── outputs/
 │   └── executables/
 │
-└── assignment_02/              <- Structural graph algorithms using CSR
+└── assignment_02/              
     ├── README.md
     ├── driver/
     ├── src/
