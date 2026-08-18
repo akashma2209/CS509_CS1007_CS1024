@@ -96,6 +96,44 @@ void assignment2()
 }
 
 
+void assignment3()
+{
+    char choice;
+
+    cout << "\nAssignment 3\n-----------------\n";
+    cout << "1. Gradient Descent\n";
+    cout << "2. Maxflow-Mincut\n";
+
+    cout << "Enter choice: ";
+    cin >> choice;
+
+    switch(choice)
+    {
+        case '1':
+            cout << "\nRunning Gradient Descent...\n";
+
+            system("g++ -std=c++17 assignment_03\\driver\\driver_gradient_descent.cpp assignment_03\\src\\Gradient_Descent.cpp -o assignment_03\\executables\\gradient_descent.exe");
+
+            system(".\\assignment_03\\executables\\gradient_descent.exe");
+
+            break;
+
+        case '2':
+            cout << "\nRunning Maxflow-Mincut...\n";
+
+            system("g++ -std=c++17 assignment_03\\driver\\driver_maxflow_mincut.cpp assignment_03\\src\\Maxflow_Mincut.cpp common\\csr\\src\\CSR.cpp common\\csr\\src\\driver_csr.cpp -o assignment_03\\executables\\maxflow_mincut.exe");
+
+            system(".\\assignment_03\\executables\\maxflow_mincut.exe");
+
+            break;
+
+        default:
+            cout << "Invalid choice\n";
+    }
+}
+
+
+
 int main()
 {
     char choice;
@@ -104,9 +142,10 @@ int main()
         cout << "\n====================================\n";
         cout << "        CS509 Buddy Assignment Menu\n";
         cout << "====================================\n";
-        cout << "1. Assignment 1\n";
-        cout << "2. Assignment 2\n";
-        cout << "3. Exit\n";
+        cout << "Press 1. Assignment 1\n";
+        cout << "Press 2. Assignment 2\n";
+        cout << "Press 3. Assignment 3\n";
+        cout << "Press 4. Exit\n";
         cout << "Enter your choice: ";
 
         cin >> choice;
@@ -121,6 +160,10 @@ int main()
                 break;
 
             case '3':
+                assignment3();
+                break;
+
+            case '4':
                 cout << "\nExiting...\n";
                 return 0;
 
