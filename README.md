@@ -54,7 +54,15 @@ CS509_CS1007_CS1024
 │   ├── outputs/
 │   └── executables/
 │
-└── assignment_02/              
+├── assignment_02/              
+│   ├── README.md
+│   ├── driver/
+│   ├── src/
+│   ├── tests/
+│   ├── outputs/
+│   └── executables/
+│
+└── assignment_03/              
     ├── README.md
     ├── driver/
     ├── src/
@@ -65,7 +73,7 @@ CS509_CS1007_CS1024
 
 Every assignment folder follows the same convention:
 - `src/` – algorithm implementations
-- `driver/` – programs that read test input, generate the CSR representation, run the algorithm, time it, and write output
+- `driver/` – programs that read test input, generate the CSR representation (where applicable), run the algorithm, time it, and write output
 - `tests/` – input test cases
 - `outputs/` – results and execution times
 - `executables/` – compiled binaries
@@ -97,8 +105,17 @@ Implements three algorithms for unweighted, undirected graphs, all built on the 
 
 Full details, algorithm walk-throughs, and test result tables: [`assignment_02/README.md`](./assignment_02/README.md)
 
+### Assignment 03 – Numerical Optimization and Network Flow
+
+Implements two algorithms with very different input types — one purely numerical, one graph-based on top of the common CSR representation:
+
+- **Gradient Descent** – an iterative optimization method that finds a minimum of a polynomial function by repeatedly moving `x` opposite to the function's derivative, scaled by a learning rate; stops on convergence (derivative below tolerance) or on hitting the maximum iteration count. Does not use CSR, since its input is a mathematical function rather than a graph.
+- **Maxflow-Mincut** – computes the maximum flow from a source to a sink on a directed, positive-integer-capacity graph using Dinic's algorithm (BFS level graphs + blocking-flow DFS), then derives the minimum cut from the final residual graph; verifies correctness via the max-flow min-cut theorem (`maxFlow == cutCapacity`). Uses the common CSR component to store the input graph.
+
+Full details, algorithm walk-throughs, and test result tables: [`assignment_03/README.md`](./assignment_03/README.md)
+
 ---
 
 ## How Results Are Measured
 
-Across both assignments, only algorithm execution time is measured — CSR preprocessing, I/O, and memory allocation are excluded from timing. Each algorithm is tested on a range of input sizes, from very small (a handful of vertices) to large (tens of thousands of vertices/edges), to observe how execution time scales with graph size — matching the theoretical time complexity of each algorithm.
+Across all three assignments, only algorithm execution time is measured — CSR preprocessing, I/O, and memory allocation are excluded from timing. Each algorithm is tested on a range of input sizes, from very small (a handful of vertices, or a low-degree polynomial) to large (tens or hundreds of thousands of vertices/edges, or high iteration counts), to observe how execution time scales with input size — matching the theoretical time complexity of each algorithm.

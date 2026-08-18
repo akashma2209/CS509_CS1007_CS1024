@@ -407,6 +407,17 @@ Minimum cut capacity: 23
 ---
 
 
+## 11. Gradient Descent Result Table
+
+The following table can be filled with the measured results obtained from the test cases.
+
+| Test File     | Degree | Initial x | Learning Rate  | Iterations | Final x | Final f(x)  | Converged | Algorithm Time |
+| ------------- | :----: | :-------: | :------------: | :--------: | :-----: | :---------: | :-------: | -------------- |
+| `gd_01.txt`   |    2   |     0     |     0.10       |     5000   |    3    |     0       |    true   |   0.014100 ms  |
+| `gd_02.txt`   |    4   |     2     |     0.02       |    10000   |    0    |     0       |    true   |   0.047400 ms  |
+| `gd_03.txt`   |    6   |     2     |     0.02       |    20000   |    0    |     0       |    true   |   0.040300 ms  |
+| `gd_04.txt`   |    8   |     2     |     0.01       |    50000   |    0    |     0       |    true   |   0.184300 ms  |
+| `gd_05.txt`   |   10   |     2     |    0.005       |   100000   |    0    |     0       |    true   |   0.454200 ms  |
 
 ---
 
@@ -443,4 +454,14 @@ Maximum Flow = Minimum Cut Capacity
 - Despite the different polynomial degrees, learning rates, and iteration limits, all the listed test cases reached a converged solution.
 - Overall, the results show that the execution time increases with the computational workload while the implementation successfully converges for the tested configurations.
 
+### 3.2 Maxflow-Mincut 
+ 
+- Maxflow-Mincut successfully passed all the test cases listed in the result table.
+- The test size increases from **6 vertices and 10 edges** in `mf_06.txt` to **100,000 vertices and 120,000 edges** in `mf_100000.txt`.
+- The execution time generally increases as the number of vertices and edges increases, from **0.0086 ms** for `mf_06.txt` to **100.234 ms** for `mf_100000.txt`.
+- The maximum-flow value is equal to the minimum-cut capacity for every test case in the result table.
+- For example, the maximum flow and minimum cut are both **23** for `mf_06.txt`, both **83** for `mf_100.txt`, and both **40** for `mf_100000.txt`.
+- The results demonstrate that the implementation is able to process the larger test case containing **100,000 vertices and 120,000 edges**.
+- The increase in execution time for larger networks is expected because more vertices and edges must be processed during BFS, DFS, and residual-graph operations.
+- Overall, the results show that the Maxflow-Mincut implementation maintains the required correctness condition while handling increasingly large flow networks.
 
