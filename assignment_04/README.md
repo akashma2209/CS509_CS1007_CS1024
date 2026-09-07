@@ -349,6 +349,17 @@ After generating the current dimension, the contribution of that dimension is re
 
 ---
 
+## 10. K-Means Result Table
+
+The following table summarizes the K-Means test cases.
+
+| Test File    |       N | D |  K | Iterations | WCSS    | Converged | Algorithm Time |
+| ------------- | ------: | -: | -: | ----------: | :------: | :-------: | --------------- |
+| `km_01.txt`  |     6 |  2 |  2 |     3 | 7.875000 | true | 0.008500  ms     |
+| `km_02.txt`  |     100 |  2 |  3 |     1 | 1581.499516 | true | 0.020300 ms     |
+| `km_03.txt`  |   1,000 |  2 |  5 |     2 | 2704.358914 | true | 0.603000 ms     |
+| `km_04.txt`  |  10,000 |  5 |  8 |     2 | 66418.506417 | true | 7.806800 ms     |
+| `km_05.txt`  | 100,000 |  5 | 10 |     2 | 66965.939542 | true | 85.131300 ms     |
 
 
 
@@ -368,6 +379,19 @@ The following table summarizes the measured FastMap results, including the pivot
 fm_5000.txt & fm_10000.txt cannot be uploades due to it large size
 
 ## 12. Observations
+
+
+### 12.1 K-Means Clustering
+
+- K-Means execution time generally increases as the number of data points increases because more point-to-centroid distance calculations are required.
+- Increasing the number of dimensions also increases the amount of computation required for each distance calculation.
+- Increasing the number of clusters increases the number of centroid comparisons performed during every assignment step.
+- The number of iterations depends on the input data, initial centroids, tolerance, and maximum iteration limit.
+- The first K input points are used as the initial centroids, providing a consistent initialization for the test cases.
+- Empty clusters are handled by keeping the previous centroid unchanged.
+- The final WCSS provides a measure of how closely the points are grouped around their corresponding centroids.
+- Since K-Means is an iterative algorithm, larger datasets require more computation for each iteration.
+- Overall, K-Means becomes more computationally expensive as the number of points, dimensions, clusters, and iterations increases.
 
 
 ### 12.2 FastMap
