@@ -398,9 +398,6 @@ fm_5000.txt & fm_10000.txt cannot be uploades due to it large size
 
 - FastMap successfully processed the smaller test cases and generated the requested lower-dimensional representations.
 - The execution time increases as the number of objects increases.
-- The execution time for `fm_5.txt` is `0.001400 ms`.
-- The execution time for `fm_10.txt` is `0.003300 ms`.
-- The execution time for `fm_100.txt` is `0.069700 ms`.
 - The execution time for the larger completed test is `7.137700 ms`.
 - The optional large test with `50,000` objects required `1108.417600 ms`.
 - The increase in execution time is expected because FastMap repeatedly performs pivot selection, coordinate calculation, and distance deflation.
