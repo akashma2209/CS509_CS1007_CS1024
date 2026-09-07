@@ -36,17 +36,17 @@ Each assignment lives in its own folder with a dedicated README covering full al
 ```
 CS509_CS1007_CS1024
 │
-├── README.md                  
+├── README.md
 ├── Makefile
 │
-├── wrapper/                   
+├── wrapper/
 │   ├── wrapper.cpp
 │   └── wrapper.exe
 │
-├── common/                    
-│   └── csr/                   
+├── common/
+│   └── csr/
 │
-├── assignment_01/              
+├── assignment_01/
 │   ├── README.md
 │   ├── driver/
 │   ├── src/
@@ -54,7 +54,7 @@ CS509_CS1007_CS1024
 │   ├── outputs/
 │   └── executables/
 │
-├── assignment_02/              
+├── assignment_02/
 │   ├── README.md
 │   ├── driver/
 │   ├── src/
@@ -62,7 +62,15 @@ CS509_CS1007_CS1024
 │   ├── outputs/
 │   └── executables/
 │
-└── assignment_03/              
+├── assignment_03/
+│   ├── README.md
+│   ├── driver/
+│   ├── src/
+│   ├── tests/
+│   ├── outputs/
+│   └── executables/
+│
+└── assignment_04/
     ├── README.md
     ├── driver/
     ├── src/
@@ -113,6 +121,17 @@ Implements two algorithms with very different input types — one purely numeric
 - **Maxflow-Mincut** – computes the maximum flow from a source to a sink on a directed, positive-integer-capacity graph using Dinic's algorithm (BFS level graphs + blocking-flow DFS), then derives the minimum cut from the final residual graph; verifies correctness via the max-flow min-cut theorem (`maxFlow == cutCapacity`). Uses the common CSR component to store the input graph.
 
 Full details, algorithm walk-throughs, and test result tables: [`assignment_03/README.md`](./assignment_03/README.md)
+
+---
+
+### Assignment 04 – Clustering and Dimensionality Reduction
+
+Implements two algorithms that operate on raw point/distance data rather than a graph structure, so this assignment does not use the common CSR component:
+
+- **K-Means Clustering** – an iterative clustering algorithm that partitions N data points into K clusters. Each point is assigned to the nearest centroid using Euclidean distance, and centroids are recalculated as the mean of their assigned points after every iteration. Uses the first K input points as the initial centroids, keeps a centroid unchanged if its cluster becomes empty, and stops when centroid movement falls below the specified tolerance or the maximum iteration count is reached. Reports the final cluster assignments, centroids, and within-cluster sum of squared distances (WCSS).
+- **FastMap** – a dimensionality reduction algorithm that maps N objects into a k-dimensional Euclidean space using only a pairwise distance matrix. For each target dimension, it selects two approximately farthest objects as pivots, projects every object onto the line between them using the law of cosines, and deflates the remaining pairwise distances before generating the next dimension. Reports the selected pivots and generated coordinates for every dimension.
+
+Full details, algorithm walk-throughs, and test result tables: [assignment_04/README.md](./assignment_04/README.md)
 
 ---
 
