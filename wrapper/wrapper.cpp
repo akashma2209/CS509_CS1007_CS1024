@@ -133,10 +133,54 @@ void assignment3()
 }
 
 
+void assignment4()
+{
+    char choice;
+
+    cout << "\nAssignment 4\n";
+    cout << "-------------------------\n";
+    cout << "1. K-Means Clustering\n";
+    cout << "2. FastMap\n";
+    cout << "Enter choice: ";
+    cin >> choice;
+
+    switch(choice)
+    {
+        case '1':
+        {
+            cout << "\nCompiling K-Means Clustering...\n";
+
+            system("cd assignment_04 && " "g++ -std=c++17 " "driver\\driver_km.cpp " "src\\kmeans.cpp " "-o executables\\kmeans.exe");
+
+            cout << "\nRunning K-Means Clustering...\n";
+
+            system("cd assignment_04 && " "executables\\kmeans.exe");
+
+            break;
+        }
+
+        case '2':
+        {
+            cout << "\nCompiling FastMap...\n";
+
+            system("g++ -std=c++17 assignment_04\\driver\\driver_fastmap.cpp assignment_04\\src\\FastMap.cpp -o assignment_04\\executables\\fastmap.exe");
+
+            cout << "\nRunning FastMap...\n";
+
+            system(".\\assignment_04\\executables\\fastmap.exe");
+
+            break;
+        }
+
+        default:
+            cout << "\nInvalid choice.\n";
+    }
+}
 
 int main()
 {
     char choice;
+
     while(true)
     {
         cout << "\n====================================\n";
@@ -145,10 +189,12 @@ int main()
         cout << "Press 1. Assignment 1\n";
         cout << "Press 2. Assignment 2\n";
         cout << "Press 3. Assignment 3\n";
-        cout << "Press 4. Exit\n";
+        cout << "Press 4. Assignment 4\n";
+        cout << "Press 5. Exit\n";
         cout << "Enter your choice: ";
 
         cin >> choice;
+
         switch(choice)
         {
             case '1':
@@ -164,6 +210,10 @@ int main()
                 break;
 
             case '4':
+                assignment4();
+                break;
+
+            case '5':
                 cout << "\nExiting...\n";
                 return 0;
 
@@ -171,5 +221,6 @@ int main()
                 cout << "\nInvalid choice.\n";
         }
     }
+
     return 0;
 }

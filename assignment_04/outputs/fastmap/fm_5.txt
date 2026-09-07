@@ -1,0 +1,12 @@
+Algorithm: FastMap
+Target dimensions: 2
+Pivots per dimension:
+Dim 1: 4 0
+Dim 2: 2 1
+Object coordinates:
+0: 6.000000 2.490172
+1: 4.333333 4.818944
+2: 3.000000 0.000000
+3: 1.666667 0.161400
+4: 0.000000 2.490172
+Execution time: 0.001400 ms
