@@ -3,7 +3,7 @@
 #include <filesystem>
 #include <chrono>
 #include <string>
-#include "../src/maxflow_Mincut.hpp"
+#include "../src/Maxflow_Mincut.hpp"
 #include "../../common/csr/src/CSR.hpp"
 #include "../../common/csr/src/driver_csr.hpp"
 using namespace std;

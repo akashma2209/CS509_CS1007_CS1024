@@ -9,7 +9,7 @@
 using namespace std;
 int main()
 {
-    ifstream fin("tests/bfs_dfs/graph_2.txt");
+    ifstream fin("assignment_01/tests/bfs_dfs/graph_2.txt");
 
     if (!fin)
     {

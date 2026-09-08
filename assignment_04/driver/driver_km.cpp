@@ -82,7 +82,7 @@ void processFile(string inputFile, string outputFile)
     
     // CREATE OUTPUT DIRECTORY
 
-    fs::create_directories("outputs/kmean");
+    fs::create_directories("assignment_04/outputs/kmean");
 
 
     
@@ -205,10 +205,10 @@ void processFile(string inputFile, string outputFile)
 int main()
 {
     // Folder containing input files
-    string testFolder = "tests/kmean";
+    string testFolder = "assignment_04/tests/kmean";
 
     // Create outputs folder if it does not exist
-    fs::create_directories("outputs/kmean");
+    fs::create_directories("assignment_04/outputs/kmean");
 
     // Process every .txt file in tests folder
     for (const auto& file : fs::directory_iterator(testFolder))
@@ -219,7 +219,7 @@ int main()
 
             string filename =file.path().stem().string();
 
-            string outputFile ="outputs/kmean/" + filename + "_output.txt";
+            string outputFile ="assignment_04/outputs/kmean/" + filename + "_output.txt";
 
             processFile(inputFile, outputFile);
         }

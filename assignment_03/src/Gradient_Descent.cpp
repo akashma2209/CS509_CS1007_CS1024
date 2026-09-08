@@ -1,4 +1,4 @@
-#include "gradient_descent.hpp"
+#include "Gradient_Descent.hpp"
 #include <cmath>
 
 double calculateFunction(double coefficient[], int degree, double x)

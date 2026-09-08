@@ -4,15 +4,15 @@
 #include <chrono>
 #include <filesystem>
 #include "../src/connected_component.hpp"
-#include "../../Assignment_01/src/csr.hpp"
+#include "../../assignment_01/src/csr.hpp"
 
 using namespace std;
 using namespace chrono;
 namespace fs = std::filesystem;
 int main()
 {
-    const string input = "tests/cc_test";
-    const string output = "outputs/cc_output";
+    const string input = "assignment_02/tests/cc_test";
+    const string output = "assignment_02/outputs/cc_output";
     fs::create_directories(output);
 
     // Delete old output files

@@ -33,8 +33,8 @@ void printCSR(ostream &out, CSR graph)
 int main()
 {
     int c =1;
-    string input = "tests/sssp";
-    string output = "outputs/graph/csr";
+    string input = "assignment_01/tests/sssp";
+    string output = "assignment_01/outputs/graph/csr";
 
     if(!fs::exists(output))
     {

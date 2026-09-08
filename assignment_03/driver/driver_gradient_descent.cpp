@@ -3,7 +3,7 @@
 #include <chrono>
 #include <iomanip>
 #include <filesystem>
-#include "../src/gradient_descent.hpp"
+#include "../src/Gradient_Descent.hpp"
 
 using namespace std;
 namespace fs = std::filesystem;

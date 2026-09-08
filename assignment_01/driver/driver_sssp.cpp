@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <climits>
 #include <chrono>
 #include <filesystem>
 #include "../src/SSSP_Graph.hpp"
@@ -9,8 +10,8 @@ namespace fs = std::filesystem;
 int main()
 {
     int c =1;
-    string input = "outputs/graph/csr";
-    string output = "outputs/sssp";
+    string input = "assignment_01/outputs/graph/csr";
+    string output = "assignment_01/outputs/sssp";
 
     for(const auto &file : fs::directory_iterator(input))
     {

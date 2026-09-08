@@ -5,15 +5,15 @@
 #include <chrono>
 #include <filesystem>
 #include "../src/betweenness.hpp"
-#include "../../Assignment_01/src/csr.hpp"
+#include "../../assignment_01/src/csr.hpp"
 using namespace std;
 using namespace chrono;
 namespace fs = std::filesystem;
 
 int main()
 {
-    const string input = "tests/bc_test";
-    const string output = "outputs/bc_output";
+    const string input = "assignment_02/tests/bc_test";
+    const string output = "assignment_02/outputs/bc_output";
     fs::create_directories(output);
     for (const auto& entry : fs::directory_iterator(output))
     {
